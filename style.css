@@ -235,6 +235,9 @@
     .author{
         font-size: 14px;
     }
+    .copy{
+        font-size: 13px;
+    }
 }
 @media only screen and (max-width: 275px) {
     .all {
@@ -282,5 +285,8 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+    }
+    .copy{
+        font-size: 12px;
     }
 }
