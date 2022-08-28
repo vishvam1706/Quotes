@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bad+Script&family=Domine:wght@500&family=DynaPuff&family=Euphoria+Script&family=Hi+Melody&family=Oleo+Script+Swash+Caps&family=Playfair+Display+SC&family=Rancho&family=Roboto+Slab:wght@300&family=Sue+Ellen+Francisco&family=Tiro+Bangla&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.all{
+    background-image: linear-gradient(-45deg,#ffffff,#4affe1,#ffffff);
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.quote{
+    font-size: 30px;
+    max-width: 500px;
+    font-family: 'Tiro Bangla';
+    text-align: center;
+    cursor: pointer;
+}
+#btn{
+    padding: 10px;
+    margin-top: 20px;
+    font-weight: 800;
+    font-family: 'Tiro Bangla';
+    background-color: #ffffff;
+    border-radius: 10%;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+#btn1{
+    padding: 10px;
+    margin-top: 20px;
+    font-weight: 800;
+    font-family: 'Tiro Bangla';
+    background-color: #ffffff;
+    border-radius: 10%;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s all;
+    margin-left: 30px;
+}
+#btn1:hover{
+    background-color: #f3f3f3;
+    box-shadow: 0px 0px 20px #000;
+}
+#btn:hover{
+    background-color: #f3f3f3;
+    box-shadow: 0px 0px 20px #000;
+}
+.author{
+    font-family: 'Tiro Bangla';
+    align-self: flex-start;
+    margin-top: 20px;
+}
+.copy{
+    font-family: 'Tiro Bangla';
+}
+.quotesave{
+    font-size: 25px;
+    max-width: 500px;
+    font-family: 'Tiro Bangla';
+    text-align: center;
+    cursor: pointer;
+    margin-top: 30px;
+    background-color: #bcfff4;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(100px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #ffffff;
+}
+.saveq{
+    /* background-color: #564aff93; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    /* margin-left: 100px;
+    margin-right: 100px; */
+    align-items: center;
+}
+.center{
+    text-align: center;
+    font-family: 'Tiro Bangla';
+    margin-bottom: 20px;
+}
+.saveq{
+    font-size: 30px;
+    font-family: 'Tiro Bangla';
+    font-weight: 800;
+}
+.btn{
+    padding: 10px;
+    font-weight: 800;
+    font-family: 'Tiro Bangla';
+    background-color: #ffffff;
+    border-radius: 10%;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s all;
+    margin-left: 30px;
+    width: 75px;
+}
+.btn:hover{
+    background-color: #f3f3f3;
+    box-shadow: 0px 0px 20px #000;
+}
+.btn1{
+    padding: 10px;
+    font-weight: 800;
+    font-family: 'Tiro Bangla';
+    background-color: #ffffff;
+    border-radius: 10%;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s all;
+    width: 75px;
+}
+.btn1:hover{
+    background-color: #f3f3f3;
+    box-shadow: 0px 0px 20px #000;
+}
+.saveQuotes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    width: 700px;
+    margin: 10px 40px 10px 40px;
+}
+.scorll{
+    margin-top: 50px;
+}
+.sm-text{
+    font-size: 16px;
+    margin-bottom: 200px;
+}
+.sm-text1{
+    font-size: 16px;
+    height: 10px;
+}
+.sm-text2{
+    text-align: center;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flexdc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (min-width:484px) and (max-width: 680px) {
+    .all {
+        background-image: linear-gradient(-45deg,#ffffff,#ff4ad2,#ffffff);
+    }
+    .sm-text{
+        font-size: 10px;
+    }
+    .sm-text1{
+        font-size: 15px;
+        height: 5px;
+        /* background-color: #000; */
+    }
+    .sm-text2{
+        font-size: 20px;
+        text-align: center;
+    }
+    .saveQuotes{
+        flex-direction: column;
+    }
+    .flex{
+        margin-top: 10px;
+    }
+    .quote{
+        font-size: 24px;
+    }
+    #btn{
+        padding: 7px;
+    }
+    #btn1{
+        padding: 7px;
+    }
+}
+
+@media (min-width:274px) and (max-width: 485px) {
+    .all {
+        background-image: linear-gradient(-45deg,#ffffff,#fff34a,#ffffff);
+    }
+    .sm-text{
+        font-size: 10px;
+    }
+    .sm-text1{
+        font-size: 15px;
+        height: 15px;
+        /* background-color: #000; */
+    }
+    .sm-text2{
+        font-size: 18px;
+        text-align: center;
+    }
+    .saveQuotes{
+        flex-direction: column;
+    }
+    .flex{
+        margin-top: 10px;
+    }
+    .quote{
+        font-size: 18px;
+    }
+    #btn{
+        padding: 5px;
+        font-size: 11px;
+    }
+    #btn1{
+        padding: 5px;
+        font-size: 11px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .author{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 275px) {
+    .all {
+        background-image: linear-gradient(-45deg,#ffffff,#ff4a95,#ffffff);
+    }
+    .sm-text{
+        font-size: 10px;
+    }
+    .sm-text1{
+        font-size: 15px;
+        height: 5px;
+        /* background-color: #000; */
+    }
+    .author{
+        font-size: 14px;
+    }
+    .sm-text2{
+        font-size: 18px;
+        text-align: center;
+    }
+    .saveQuotes{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .flex{
+        margin-top: 10px;
+    }
+    .quote{
+        font-size: 18px;
+    }
+    #btn{
+        padding: 5px;
+        font-size: 11px;
+    }
+    #btn1{
+        padding: 5px;
+        font-size: 11px;
+        margin-left: 0px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .df{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
