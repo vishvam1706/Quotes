@@ -32,7 +32,7 @@ function clickToCopy() {
   document.execCommand("copy");
   document.body.removeChild(elem);
   setTimeout(() => {
-    copy.innerText = "Copy successful";
+    copy.innerText = "Copied successful";
   }, 0);
   setTimeout(() => {
     copy.innerText = "";
@@ -40,8 +40,16 @@ function clickToCopy() {
 }
 
 //click to copy saved Quotes
-function CopySavedQuotes(element,index) {
-  quotescopy = element;
+function CopySavedQuotes(index) {
+    let SaveQuote = localStorage.getItem("Quotes");
+    
+    if (SaveQuote == null) {
+       QuotesArray = [];
+        QuotesObj = {};
+     } else {
+            QuotesArray = JSON.parse(SaveQuote);
+      }
+  quotescopy = QuotesArray[index].quo;
   let elem = document.createElement("textarea");
   document.body.appendChild(elem);
   elem.value = quotescopy;
@@ -49,7 +57,7 @@ function CopySavedQuotes(element,index) {
   document.execCommand("copy");
   document.body.removeChild(elem);
   setTimeout(() => {
-      document.getElementsByClassName('sm-text1')[index].innerText = 'Copy Successful';
+      document.getElementsByClassName('sm-text1')[index].innerText = 'Copied Successful';
   }, 0);
   setTimeout(() => {
       document.getElementsByClassName('sm-text1')[index].innerText = '';
@@ -65,34 +73,44 @@ function addquotes() {
 
   if (SaveQuote == null) {
     QuotesArray = [];
+    QuotesObj = {};
   } else {
     QuotesArray = JSON.parse(SaveQuote);
   }
-  QuotesArray.push(quotes.innerText);
+  QuotesObj = {quo : quotes.innerText,athor : author.innerText};
+  QuotesArray.push(QuotesObj);
   localStorage.setItem("Quotes", JSON.stringify(QuotesArray));
   showQuotes();
+  setTimeout(() => {
+    copy.innerText = "Quote Saved";
+  }, 0);
+  setTimeout(() => {
+    copy.innerText = "";
+  }, 1500);
 }
 
 // create showQuotes for show quotes
 function showQuotes() {
-  let SaveQuote = localStorage.getItem("Quotes");
-
-  if (SaveQuote == null) {
-    QuotesArray = [];
-  } else {
-    QuotesArray = JSON.parse(SaveQuote);
-  }
+    let SaveQuote = localStorage.getItem("Quotes");
+    
+      if (SaveQuote == null) {
+        QuotesArray = [];
+        QuotesObj = {};
+      } else {
+        QuotesArray = JSON.parse(SaveQuote);
+      }
   let show = "";
   QuotesArray.forEach(function (element, index) {
     show += `
         <div class = "saveQuotes">
         <div>
-        <p class="sm-text2">${element}</p>
+        <p class="sm-text2">${element.quo}</p>
+        <p class="s-text">${element.athor}</p>
         <p class="sm-text1"></p>
         </div>
         <div class="flex">
-        <button id=${index} class='btn1' onclick=deleteQuotes(this.id)>Remove From Save</button>
-        <button class='btn' onclick="CopySavedQuotes('${element}','${index}')">Copy Quotes</button>
+        <button id=${index} class='btn1' onclick=deleteQuotes(this.id)>Unsave Quote</button>
+        <button class='btn' onclick="CopySavedQuotes('${index}')">Copy Quote</button>
         </div>
         </div>
         `;
@@ -110,6 +128,7 @@ function deleteQuotes(index) {
 
   if (SaveQuote == null) {
     QuotesArray = [];
+    QuotesObj = {};
   } else {
     QuotesArray = JSON.parse(SaveQuote);
   }

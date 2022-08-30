@@ -16,7 +16,7 @@
     margin-right: 50px;
 }
 .quote{
-    font-size: 30px;
+    font-size: 28px;
     max-width: 500px;
     font-family: 'Tiro Bangla';
     text-align: center;
@@ -60,6 +60,8 @@
 }
 .copy{
     font-family: 'Tiro Bangla';
+    height: 10px;
+    line-height: 10px;
 }
 .quotesave{
     font-size: 25px;
@@ -150,6 +152,7 @@
 }
 .sm-text2{
     text-align: center;
+    font-size: 25px;
 }
 .flex{
     display: flex;
@@ -162,7 +165,18 @@
     justify-content: center;
     flex-direction: column;
 }
-
+.s-text{
+    font-size: 17px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.name{
+    font-family: 'Tiro Bangla';
+    font-size: 25px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
 @media (min-width:484px) and (max-width: 680px) {
     .all {
         background-image: linear-gradient(-45deg,#ffffff,#ff4ad2,#ffffff);
@@ -194,6 +208,16 @@
     #btn1{
         padding: 7px;
     }
+    .copy{
+        font-size: 12px;
+        height: 20px;
+        line-height: 20px;
+    }
+    .s-text{
+        font-size: 17px;
+        margin-left: 15px;
+        margin-top: 10px;
+    }
 }
 
 @media (min-width:274px) and (max-width: 485px) {
@@ -204,12 +228,12 @@
         font-size: 10px;
     }
     .sm-text1{
-        font-size: 15px;
+        font-size: 13px;
         height: 15px;
         /* background-color: #000; */
     }
     .sm-text2{
-        font-size: 18px;
+        font-size: 15px;
         text-align: center;
     }
     .saveQuotes{
@@ -237,6 +261,13 @@
     }
     .copy{
         font-size: 13px;
+        height: 25px;
+        line-height: 25px;
+    }
+    .s-text{
+        font-size: 13px;
+        margin-left: 15px;
+        margin-top: 10px;
     }
 }
 @media only screen and (max-width: 275px) {
@@ -247,7 +278,7 @@
         font-size: 10px;
     }
     .sm-text1{
-        font-size: 15px;
+        font-size: 13px;
         height: 5px;
         /* background-color: #000; */
     }
@@ -255,7 +286,7 @@
         font-size: 14px;
     }
     .sm-text2{
-        font-size: 18px;
+        font-size: 15px;
         text-align: center;
     }
     .saveQuotes{
@@ -288,5 +319,12 @@
     }
     .copy{
         font-size: 12px;
+        height: 20px;
+        line-height: 20px;
+    }
+    .s-text{
+        font-size: 13px;
+        margin-left: 15px;
+        margin-top: 10px;
     }
 }
