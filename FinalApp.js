@@ -6,8 +6,9 @@ let copy = document.getElementById("copy");
 let saveq = document.getElementById("saveq");
 
 // fetch api from url
-function FetchQuotesApi() {
-  fetch("https://api.quotable.io/random")
+async function FetchQuotesApi() {
+  
+    await fetch("https://api.quotable.io/random")
     .then((response) => {
       return response.json();
     })
@@ -70,6 +71,7 @@ FetchQuotesApi();
 // add to quotes function its save quotes in localstorage
 function addquotes() {
   let SaveQuote = localStorage.getItem("Quotes");
+  let flag = 1;
 
   if (SaveQuote == null) {
     QuotesArray = [];
@@ -77,16 +79,40 @@ function addquotes() {
   } else {
     QuotesArray = JSON.parse(SaveQuote);
   }
-  QuotesObj = {quo : quotes.innerText,athor : author.innerText};
-  QuotesArray.push(QuotesObj);
-  localStorage.setItem("Quotes", JSON.stringify(QuotesArray));
-  showQuotes();
-  setTimeout(() => {
-    copy.innerText = "Quote Saved";
-  }, 0);
-  setTimeout(() => {
-    copy.innerText = "";
-  }, 1500);
+  for (let i = 0; i < QuotesArray.length; i++) {
+    let element = QuotesArray[i];
+    console.log(element.quo);
+      if(element.quo === quotes.innerText)
+      {
+        flag=0;
+        break;
+      }
+      else
+      {
+        flag=1;
+      }
+  }
+  if(flag==1)
+  {
+    QuotesObj = {quo : quotes.innerText,athor : author.innerText};
+    QuotesArray.push(QuotesObj);
+    localStorage.setItem("Quotes", JSON.stringify(QuotesArray));
+    showQuotes();
+    setTimeout(() => {
+      copy.innerText = "Quote Saved";
+    }, 0);
+    setTimeout(() => {
+      copy.innerText = "";
+    }, 1500);
+  }
+  else{
+    setTimeout(() => {
+      copy.innerText = "Quote Saved";
+    }, 0);
+    setTimeout(() => {
+      copy.innerText = "";
+    }, 1500);
+  }
 }
 
 // create showQuotes for show quotes
