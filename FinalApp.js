@@ -81,7 +81,6 @@ function addquotes() {
   }
   for (let i = 0; i < QuotesArray.length; i++) {
     let element = QuotesArray[i];
-    console.log(element.quo);
       if(element.quo === quotes.innerText)
       {
         flag=0;
